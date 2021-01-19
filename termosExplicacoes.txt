@@ -1,0 +1,19 @@
+.jpa.hibernate.ddl-auto ->  é uma propriedade específica do Spring Data JPA e é sua maneira de especificar um valor que será eventualmente passado para o Hibernate
+sob a propriedade que ele conhece. (Hibernate é uma implementaçao do JPA. Ela entende os mapas que adicionamos entre os objetos e tabelas. 
+Ela faz ter certeza que o dado está guardado de uma database baseada nos mapas). Os valores após a ddl vão, basicamente, influenciar na forma como o gerenciamento de 
+ferramentas esquema irá manipular o esquema de banco de dados na inicialização. Por exemplo, o update consultará a API do driver JDBC para obter os metadados 
+do banco de dados e então o Hibernate compara o modelo de objeto que ele cria com base na leitura de suas classes anotadas ou mapeamentos HBM XML e tentará ajustar o
+esquema em tempo real. Ele tentará adicionar novas colunas, restrições, etc, mas nunca removerá uma coluna ou restrição que possa ter existido anteriormente, 
+mas não faz mais parte do modelo de objeto de uma execução anterior.
+
+.datasource.url -> um datasource é uma "fábrica" para conexões de qualquer data source físico. Uma alternativa para a facilidade do DriverManager. Ele usa uma URL
+com algumas credenciais para estabelecer uma conexão de database. 
+
+.datasource.username e .datasource.password -> para rodar/acessar uma aplicação DataSource, precisamos de conexão com a informação, por isso, é necessário informar 
+o usuário e senha utilizados no MySQL. 
+
+.jpa.show-sql=true -> é usado para visualizar uma consulta, solicitação ou requisição (query) no JPA.
+
+private Date date = new java.sql.Date(System.currentTimeMillis()); - > assim que algum dado for passado pela classe criada, será capturada a data, hora, segundo e
+milésimo exatos em que o dado passou pela classe.
+
